@@ -70,7 +70,7 @@ int main(int argc, char*argv[]){
 	int IntFaultProbability=(int) (FaultProbability*100.0);
 	for(i=0;i<Height;i++)	
 		for(j=0;j<Width;j++) {
-				F[i][j]= ( (random()%100) < IntFaultProbability ) ? 1:0;
+				F[i][j]= ( (rand()%100) < IntFaultProbability ) ? 1:0;
 				// Src and Dst cann't be Faulty Node; Override
 				F[srcX][srcY]=0; F[dstX][dstY]=0;
 				if (F[i][j]==1) {
